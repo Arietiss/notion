@@ -57,14 +57,14 @@
 
     var greet;
 
-    if (hrs < 12)
-        greet = 'Buenos días, Arietis.  ';
+    if (hrs < 6)
+        greet = 'buena madrugada, Arietis.';
+    else if (hrs >= 6 && hrs <= 12)
+        greet = 'buenos dias, Arietis. ';
     else if (hrs >= 12 && hrs <= 19)
-        greet = 'buenas tardes, Arietis. ';
-    else if (hrs >= 19 && hrs <= 24)
-        greet = 'buenas noches, Arietis.  ';
-
-    document.getElementById('lbl').innerHTML = `
+        greet = 'buenas tardes, Arietis.  '; 
+  else if (hrs >= 19 && hrs <= 24)
+        greet = 'buenas tardes, Arietis. ';document.getElementById('lbl').innerHTML = `
         <div class="container">
           <div id="date"> ${date}</div>
           <div class="greeting">${greet}</div>
